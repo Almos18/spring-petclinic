@@ -19,7 +19,6 @@ node {
       withEnv(["MVN_HOME=$mvnHome"]) {
               
             bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean spring-javaformat:apply package/)
-         }
       }
    }
    stage('Results') {
