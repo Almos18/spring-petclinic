@@ -33,6 +33,7 @@ stages:
         effectivePomSkip: false
         sonarQubeRunAnalysis: true
         sqMavenPluginVersionChoice: 'latest'
+        
     - task: Docker@2
       displayName: Build an image
       inputs:
