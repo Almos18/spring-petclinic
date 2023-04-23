@@ -41,3 +41,4 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/.devcontainer/Dockerfile'
         tags: |
           $(tag)
+    
