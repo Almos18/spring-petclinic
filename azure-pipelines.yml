@@ -38,10 +38,8 @@ stages:
         sonarQubeRunAnalysis: false
         
     - task: Docker@2
-      displayName: Build an image
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/.devcontainer/Dockerfile'
-        tags: |
-          $(tag)
+        repository: 'spring-petclinic'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
     
