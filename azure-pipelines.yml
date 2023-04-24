@@ -35,11 +35,7 @@ stages:
         mavenVersionOption: 'Default'
         mavenAuthenticateFeed: false
         effectivePomSkip: false
-        sonarQubeRunAnalysis: false
+        sonarQubeRunAnalysis: true
         
-    - task: Docker@2
-      inputs:
-        repository: 'spring-petclinic'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+    
     
