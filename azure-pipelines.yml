@@ -35,7 +35,12 @@ stages:
         mavenVersionOption: 'Default'
         mavenAuthenticateFeed: false
         effectivePomSkip: false
-        sonarQubeRunAnalysis: true
-        
+        sonarQubeRunAnalysis: false
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        appType: 'webApp'
+        WebAppName: 'spring-petclinic'
+        packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
     
     
