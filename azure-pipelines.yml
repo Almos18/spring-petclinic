@@ -42,4 +42,5 @@ stages:
         mavenAuthenticateFeed: false
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
+    - task: SonarCloudAnalyze@1
    
