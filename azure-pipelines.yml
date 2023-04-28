@@ -52,13 +52,5 @@ stages:
       inputs:
         containerRegistry: 'a'
         repository: 'abs1356 / spring-petclinic'
-        command: 'build'
+        command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-        tags: 'latest'
-
-    - task: Docker@2
-      inputs:
-        containerRegistry: 'a'
-        repository: 'abs1356 / spring-petclinic'
-        command: 'push'
-        tags: 'latest'
