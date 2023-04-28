@@ -48,3 +48,17 @@ stages:
       inputs:
         pollingTimeoutSec: '300'
 
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'a'
+        repository: 'abs1356 / spring-petclinic'
+        command: 'build'
+        Dockerfile: '**/Dockerfile'
+        tags: 'latest'
+
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'a'
+        repository: 'abs1356 / spring-petclinic'
+        command: 'push'
+        tags: 'latest'
