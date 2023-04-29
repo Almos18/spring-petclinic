@@ -26,7 +26,6 @@ stages:
         versionSpec: '17'
         jdkArchitectureOption: 'x64'
         jdkSourceOption: 'PreInstalled'
-
     - task: SonarCloudPrepare@1
       inputs:
         SonarCloud: 'Spring-Petclinic Project Devops'
@@ -42,12 +41,10 @@ stages:
         mavenAuthenticateFeed: false
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
-
     - task: SonarCloudAnalyze@1
     - task: SonarCloudPublish@1
       inputs:
         pollingTimeoutSec: '300'
-
     - task: Docker@2
       inputs:
         containerRegistry: 'a'
@@ -55,7 +52,6 @@ stages:
         command: 'build'
         Dockerfile: '**/Dockerfile'
         tags: 'latest'
-
     - task: Docker@2
       inputs:
         containerRegistry: 'a'
